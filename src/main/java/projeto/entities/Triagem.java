@@ -10,6 +10,9 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.GenericGenerator;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonFormat.Shape;
+
 @Entity
 public class Triagem {
 
@@ -18,6 +21,7 @@ public class Triagem {
     	@GenericGenerator(name = "increment", strategy = "increment")
 	private Long id;
 	
+	@JsonFormat(pattern = "yyyy-MM-dd", shape = Shape.STRING)
 	private Date datat;
 	
 	//plastico, vidro, papel, papelão, sucata, aluminio, ferro, blocos de isopor(não bandejinha), equipamentos de informatica, eletronicos, capas de CD, fitas VHS, K7
@@ -41,7 +45,7 @@ public class Triagem {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
+	
 	public Date setDatat() {
 		return datat;
 	}
