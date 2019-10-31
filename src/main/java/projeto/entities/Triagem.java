@@ -15,10 +15,10 @@ public class Triagem {
 
 	@Id
 	@GeneratedValue(generator = "increment")
-    @GenericGenerator(name = "increment", strategy = "increment")
+    	@GenericGenerator(name = "increment", strategy = "increment")
 	private Long id;
 	
-	private Date data_triagem;
+	private Date datat;
 	
 	//plastico, vidro, papel, papelão, sucata, aluminio, ferro, blocos de isopor(não bandejinha), equipamentos de informatica, eletronicos, capas de CD, fitas VHS, K7
 	@Size(max = 100)
@@ -42,12 +42,12 @@ public class Triagem {
 		this.id = id;
 	}
 
-	public Date getData_Triagem() {
-		return data_triagem;
+	public Date setDatat() {
+		return datat;
 	}
 
-	public void setData_Triagem(Date data_triagem) {
-		this.data_triagem = data_triagem;
+	public void setDatat(Date datat) {
+		this.datat = datat;
 	}
 
 	public String getTipo() {
